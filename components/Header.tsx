@@ -1,42 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import LogoImage from "../public/assets/newLogo.png";
+import { navLinks } from "../constants";
+import { menu, close } from "../public/assets";
 
 function Header() {
+  const [toggle, setToggle] = useState(false);
   return (
-    <header className="max-w-7xl mx-auto bg-sky-200 flex items-center justify-between p-5 sticky top-0 z-50">
+    <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 sticky top-0 z-50 border-b-[1px] border-b-cyan-900">
       <Link href="/">
-        <img
-          className="w-44 object-contain cursor-pointer"
-          src="https://links.papareact.com/yvf"
-        />
+        <Image width={300} height={62} src={LogoImage} />
       </Link>
-      <div className="hidden md:inline-flex items-center space-x-2 font-semibold">
-        <Link href="/">
-          <h3 className="hover:bg-sky-300 transform active:bg-sky-600 duration-200 ease-in-out px-6 cursor-pointer py-2 rounded-md">
-            Home
-          </h3>
-        </Link>
-        <Link href="/post/article">
-          <h3 className="hover:bg-sky-300 transform active:bg-sky-600 duration-200 ease-in-out px-6 cursor-pointer py-2 rounded-md">
-            Contribute
-          </h3>
-        </Link>
-        <h3 className="hover:bg-sky-300 transform active:bg-sky-600 duration-200 ease-in-out px-6 cursor-pointer py-2 rounded-md">
-          Follow
-        </h3>
-      </div>
-      <div className="flex items-center space-x-2 text-Zinc-900">
-        <Link href="/post/login">
-          <h3 className="font-semibold hover:bg-sky-300 transform active:bg-sky-600 duration-200 ease-in-out px-6 cursor-pointer py-2 rounded-md">
-            Sign In
-          </h3>
-        </Link>
-        <h3
-          className="border px-3 py-2 rounded-md border-sky-600
-        hover:bg-sky-300 transform active:bg-sky-600 duration-200 ease-in-out cursor-pointer"
+
+      <ul className="list-none hidden sm:flex">
+        {navLinks.map((navLink, index) => (
+          <li
+            key={navLink.id}
+            className={`text-dimWhite font-bodyFont font-semibold cursor-pointer text-[16px] ${
+              index === navLinks.length - 1 ? "mr-0" : "mr-10"
+            } hover:text-cyan-400 duration-300`}
+          >
+            {navLink.title}
+          </li>
+        ))}
+      </ul>
+      <div className="sm:hidden flex flex-1 justify-end items-center">
+        <Image
+          src={toggle ? close : menu}
+          onClick={() => setToggle((prev) => !prev)}
+          className="cursor-pointer"
+        />
+        <div
+          className={`${
+            toggle ? "flex" : "hidden"
+          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
-          Get Started
-        </h3>
+          <ul className="list-none flex flex-col justify-end items-center flex-1">
+            {navLinks.map((navLink, index) => (
+              <li
+                key={navLink.id}
+                className={`font-poppins text-white font-normal cursor-pointer text-[16px] mb-4 hover:text-cyan-400 hover:border-b-[1px] border-cyan-400 duration-300 w-full text-center`}
+              >
+                <a href={navLink.href}>{navLink.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </header>
   );
