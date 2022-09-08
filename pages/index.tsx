@@ -7,6 +7,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import CardDeal from "../components/CardDeal";
 import Billing from "../components/Billing";
+import Image from "next/image";
 
 interface Props {
   posts: [Post];
@@ -36,8 +37,12 @@ export default function Home({ posts }: Props) {
           {posts.map((post) => (
             <Link key={post._id} href={`/post/${post.slug.current}`} passHref>
               <div className="group brightness-75 hover:brightness-100 duration-100 cursor-pointer overflow-hidden border rounded-lg">
-                <img
-                  className="h-60 w-full object-cover group-hover:scale-105 transition-transform ease-in-out duration-300"
+                <Image
+                  width={380}
+                  height={300}
+                  objectFit="cover"
+                  layout="responsive"
+                  className="group-hover:scale-105 transition-transform ease-in-out duration-300"
                   src={urlFor(post.mainImage).url()}
                   alt="images"
                 />

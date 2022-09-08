@@ -6,7 +6,7 @@ const Billing = () => (
     id="product"
     className={`flex md:flex-row flex-col-reverse sm:py-16 py-6 px-4 md:px-0`}
   >
-    <div className="flex-1 flex justify-center items-center md:mr-10 mr-0 md:mt-0 mt-10 relative">
+    <div className="flex-1 flex justify-center items-center md:mr-10 mr-0 md:mt-0 mt-10 relative brightness-75 hover:brightness-100 duration-150">
       <Image
         src={bill}
         alt="BillImage"
@@ -21,7 +21,7 @@ const Billing = () => (
         invoicing.
       </h2>
       <p
-        className={`font-bodyFont font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5`}
+        className={`font-bodyFont font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5 hover:text-white duration-300`}
       >
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, rem harum
         aspernatur impedit expedita repellendus officia! Suscipit ducimus
