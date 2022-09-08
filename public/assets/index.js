@@ -7,6 +7,7 @@ import facebook from "./facebook.svg";
 import linkedin from "./linkedin.svg";
 import instagram from "./instagram.svg";
 import twitter from "./twitter.svg";
+import card from "./card.png";
 
 export {
   discount,
@@ -18,4 +19,5 @@ export {
   linkedin,
   instagram,
   twitter,
+  card,
 };

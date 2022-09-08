@@ -8,9 +8,14 @@ import { menu, close } from "../public/assets";
 function Header() {
   const [toggle, setToggle] = useState(false);
   return (
-    <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 sticky top-0 z-50 border-b-[1px] border-b-cyan-900">
+    <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 sticky top-0 z-10 border-b-[1px] border-b-cyan-900">
       <Link href="/">
-        <Image width={300} height={62} src={LogoImage} />
+        <Image
+          width={300}
+          height={62}
+          src={LogoImage}
+          className="cursor-pointer"
+        />
       </Link>
 
       <ul className="list-none hidden sm:flex">
@@ -21,7 +26,7 @@ function Header() {
               index === navLinks.length - 1 ? "mr-0" : "mr-10"
             } hover:text-cyan-400 duration-300`}
           >
-            {navLink.title}
+            <Link href={navLink.href}>{navLink.title}</Link>
           </li>
         ))}
       </ul>

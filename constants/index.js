@@ -9,7 +9,7 @@ export const navLinks = [
   {
     id: "contribute",
     title: "Contribute",
-    href: "#",
+    href: "/post/article",
   },
   {
     id: "follow",

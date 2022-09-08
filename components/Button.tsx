@@ -4,10 +4,10 @@ const Button = () => (
   <button
     type="button"
     className={
-      "py-2 px-4 bg-blue-gradient font-poppins font-medium text-[18px] text-dimWhite outline-none border-[1px] border-cyan-700"
+      "py-4 px-8 bg-blue-gradient font-poppins font-medium text-[20px] text-primary outline-none rounded-md brightness-75 hover:brightness-125 duration-300"
     }
   >
-    Get Started
+    Start Reading
   </button>
 );
 
