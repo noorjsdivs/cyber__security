@@ -1,3 +1,4 @@
+import LogoImage from "./newLogo.png";
 import discount from "./Discount.svg";
 import robot from "./robot.png";
 import arrowUp from "./arrowUp.svg";
@@ -14,6 +15,7 @@ import apple from "./apple.svg";
 import bill from "./bill.png";
 
 export {
+  LogoImage,
   discount,
   robot,
   arrowUp,

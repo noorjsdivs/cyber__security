@@ -9,8 +9,9 @@ const FooterExtra = () => {
     <div className=" max-w-screen-xl mx-auto flex justify-center items-center flex-col px-4 md:px-0 pb-6 border-t-[1px] border-t-cyan-900 py-4">
       <div className={`flex justify-start md:flex-row flex-col mb-8 w-full`}>
         <div className="mr-20 flex-col justify-start items-center text-left">
-          <Link href="/">
+          <Link href="/" passHref>
             <Image
+              alt="LogoImage"
               height={80}
               width={300}
               src={LogoImage}
@@ -32,16 +33,16 @@ const FooterExtra = () => {
               </h4>
               <ul className="list-none mt-4">
                 {footerLink.links.map((link, index) => (
-                  <Link href={link.link}>
-                    <li
-                      key={link.name}
-                      className={`font-bodyFont font-normal text-[16px] leading-[24px] text-primary hover:text-secondary duration-200 cursor-pointer ${
-                        index !== footerLink.links.length - 1 ? "mb-4" : "mb-0"
-                      }`}
-                    >
+                  <li
+                    key={index}
+                    className={`font-bodyFont font-normal text-[16px] leading-[24px] text-primary hover:text-secondary duration-200 cursor-pointer ${
+                      index !== footerLink.links.length - 1 ? "mb-4" : "mb-0"
+                    }`}
+                  >
+                    <Link href={link.link} passHref>
                       {link.name}
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -55,18 +56,20 @@ const FooterExtra = () => {
 
         <div className="flex flex-row items-center">
           {socialMedia.map((social, index) => (
-            <Link href={social.link}>
-              <a target="_blank">
-                <Image
-                  width={30}
-                  key={social.id}
-                  src={social.icon}
-                  className={`brightness-0 hover:brightness-50 text-primary duration-300 cursor-pointer ${
-                    index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
-                  }`}
-                />
-              </a>
-            </Link>
+            <div key={social.id}>
+              <Link href={social.link} passHref>
+                <a target="_blank">
+                  <Image
+                    alt="Social Icon"
+                    width={30}
+                    src={social.icon}
+                    className={`brightness-0 hover:brightness-50 text-primary duration-300 cursor-pointer ${
+                      index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+                    }`}
+                  />
+                </a>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

@@ -9,8 +9,9 @@ function Header() {
   const [toggle, setToggle] = useState(false);
   return (
     <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 sticky top-0 z-10 border-b-[1px] border-b-cyan-900">
-      <Link href="/">
+      <Link href="/" passHref>
         <Image
+          alt="LogoImage"
           width={300}
           height={62}
           src={LogoImage}
@@ -26,12 +27,15 @@ function Header() {
               index === navLinks.length - 1 ? "mr-0" : "mr-10"
             } hover:text-cyan-400 duration-300`}
           >
-            <Link href={navLink.href}>{navLink.title}</Link>
+            <Link href={navLink.href} passHref>
+              {navLink.title}
+            </Link>
           </li>
         ))}
       </ul>
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <Image
+          alt="toggle Icons"
           src={toggle ? close : menu}
           onClick={() => setToggle((prev) => !prev)}
           className="cursor-pointer"
@@ -42,12 +46,14 @@ function Header() {
           } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1">
-            {navLinks.map((navLink, index) => (
+            {navLinks.map((navLink) => (
               <li
                 key={navLink.id}
                 className={`font-poppins text-white font-normal cursor-pointer text-[16px] mb-4 hover:text-cyan-400 hover:border-b-[1px] border-cyan-400 duration-300 w-full text-center`}
               >
-                <a href={navLink.href}>{navLink.title}</a>
+                <Link href={navLink.href} passHref>
+                  {navLink.title}
+                </Link>
               </li>
             ))}
           </ul>

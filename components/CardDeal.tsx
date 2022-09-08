@@ -18,8 +18,7 @@ const CardDeal = () => (
     </div>
 
     <div className="flex-1 flex brightness-90 hover:brightness-125 duration-200 justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative">
-      <Image src={card} />
-      {/* <img src={card} alt="card" className="w-[100%] h-[100%]" /> */}
+      <Image src={card} alt="cardImage" />
     </div>
   </div>
 );

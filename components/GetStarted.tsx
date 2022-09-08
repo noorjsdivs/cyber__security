@@ -8,7 +8,7 @@ const GetStarted = () => (
         <p className=" font-medium text-[18px] leading-[23px] mr-2">
           <span className="text-gradient">Get</span>
         </p>
-        <Image src={arrowUp} />
+        <Image src={arrowUp} alt="ArrowUp" />
       </div>
       <div>
         <p className="font-medium text-[18px] leading-[23px]">

@@ -34,12 +34,12 @@ export default function Home({ posts }: Props) {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 lg:p-6 border-b-[1px] border-b-cyan-900">
           {posts.map((post) => (
-            <Link key={post._id} href={`/post/${post.slug.current}`}>
+            <Link key={post._id} href={`/post/${post.slug.current}`} passHref>
               <div className="group brightness-75 hover:brightness-100 duration-100 cursor-pointer overflow-hidden border rounded-lg">
                 <img
                   className="h-60 w-full object-cover group-hover:scale-105 transition-transform ease-in-out duration-300"
                   src={urlFor(post.mainImage).url()}
-                  alt=""
+                  alt="images"
                 />
                 <div className="flex justify-between h-full p-5 bg-white">
                   <div>
