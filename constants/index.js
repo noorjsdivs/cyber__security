@@ -1,4 +1,10 @@
-import { facebook, twitter, linkedin, instagram } from "../public/assets";
+import {
+  facebook,
+  twitter,
+  linkedin,
+  instagram,
+  github,
+} from "../public/assets";
 
 export const navLinks = [
   {
@@ -29,23 +35,23 @@ export const footerLinks = [
     links: [
       {
         name: "Content",
-        link: "https://www.hoobank.com/content/",
+        link: "#",
       },
       {
         name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        link: "#",
       },
       {
         name: "Create",
-        link: "https://www.hoobank.com/create/",
+        link: "#",
       },
       {
         name: "Explore",
-        link: "https://www.hoobank.com/explore/",
+        link: "#",
       },
       {
         name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
+        link: "#",
       },
     ],
   },
@@ -54,23 +60,23 @@ export const footerLinks = [
     links: [
       {
         name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
+        link: "#",
       },
       {
         name: "Partners",
-        link: "https://www.hoobank.com/partners/",
+        link: "#",
       },
       {
         name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
+        link: "#",
       },
       {
         name: "Blog",
-        link: "https://www.hoobank.com/blog/",
+        link: "#",
       },
       {
         name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
+        link: "#",
       },
     ],
   },
@@ -79,11 +85,11 @@ export const footerLinks = [
     links: [
       {
         name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "#",
       },
       {
         name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        link: "#",
       },
     ],
   },
@@ -91,23 +97,28 @@ export const footerLinks = [
 
 export const socialMedia = [
   {
+    id: "social-media-0",
+    icon: github,
+    link: "https://github.com/noorjsdivs",
+  },
+  {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/simplenoor143/",
   },
   {
     id: "social-media-2",
     icon: facebook,
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/Noorlalu143",
   },
   {
     id: "social-media-3",
     icon: twitter,
-    link: "https://www.twitter.com/",
+    link: "https://github.com/noorjsdivs",
   },
   {
     id: "social-media-4",
     icon: linkedin,
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/noor-mohammad-ab2245193/",
   },
 ];

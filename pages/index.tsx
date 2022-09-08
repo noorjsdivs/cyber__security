@@ -6,6 +6,7 @@ import { Post } from "../typings";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import CardDeal from "../components/CardDeal";
+import Billing from "../components/Billing";
 
 interface Props {
   posts: [Post];
@@ -31,7 +32,7 @@ export default function Home({ posts }: Props) {
             Popular Articles:
           </h1>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 lg:p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 lg:p-6 border-b-[1px] border-b-cyan-900">
           {posts.map((post) => (
             <Link key={post._id} href={`/post/${post.slug.current}`}>
               <div className="group brightness-75 hover:brightness-100 duration-100 cursor-pointer overflow-hidden border rounded-lg">
@@ -61,6 +62,7 @@ export default function Home({ posts }: Props) {
             </Link>
           ))}
         </div>
+        <Billing />
         <Footer />
       </div>
     </div>

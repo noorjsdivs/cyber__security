@@ -14,7 +14,7 @@ function Header() {
           width={300}
           height={62}
           src={LogoImage}
-          className="cursor-pointer"
+          className="cursor-pointer hover:brightness-125 duration-1000"
         />
       </Link>
 

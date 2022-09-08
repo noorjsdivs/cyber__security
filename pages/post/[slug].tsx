@@ -5,6 +5,7 @@ import { sanityClient, urlFor } from "../../sanity";
 import { Post } from "../../typings";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
+import FooterExtra from "../../components/FooterExtra";
 
 interface IFormInput {
   _id: string;
@@ -50,43 +51,57 @@ function Post({ post }: Props) {
         alt=""
       />
       <article className="max-w-3xl mx-auto p-5">
-        <h1 className="text-3xl mt-10 mb-3">{post.title}</h1>
-        <h2 className="text-xl font-light text-gray-500 mb-2">
+        <h1 className="font-titleFont text-[32px] text-primary mt-10 mb-3">
+          {post.title}
+        </h1>
+        <h2 className="font-bodyFont text-[18px] text-gray-500 mb-2">
           {post.description}
         </h2>
         <div className="flex items-center space-x-2">
           <img
-            className="h-110 w-10 rounded-full"
+            className="h-10 w-10 rounded-full"
             src={urlFor(post.author.image).url()}
             alt=""
           />
-          <p className="font-extralight text-sm">
+          <p className="font-bodyFont text-[16px]">
             Blog post by{" "}
-            <span className="text-green-600 font-bold">{post.author.name}</span>{" "}
+            <span className="text-cyan-600 font-bold">{post.author.name}</span>{" "}
             - Published at {new Date(post._createdAt).toLocaleString()}
           </p>
         </div>
-        <div className="mt-10">
+        <div className="mt-10 font-bodyFont">
           <PortableText
             className=""
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
             content={post.body}
             serializers={{
+              p: (props: any) => (
+                <p className="font-bodyFont text-[16px]" {...props} />
+              ),
               h1: (props: any) => (
-                <h1 className="text-2xl font-bold my-5" {...props} />
+                <h1
+                  className="text-2xl font-bold my-5 font-titleFont"
+                  {...props}
+                />
               ),
               h2: (props: any) => (
-                <h2 className="text-2xl font-bold my-5" {...props} />
+                <h2
+                  className="text-2xl font-bold my-5 font-titleFont"
+                  {...props}
+                />
               ),
               h3: (props: any) => (
-                <h3 className="text-2xl font-bold my-5" {...props} />
+                <h3
+                  className="text-2xl font-bold my-5 font-titleFont"
+                  {...props}
+                />
               ),
               li: ({ children }: any) => (
                 <li className="ml-4 list-disc">{children}</li>
               ),
               link: ({ href, children }: any) => (
-                <a href={href} className="text-blue-500 hover:underline">
+                <a href={href} className="text-cyan-500 hover:underline">
                   {children}
                 </a>
               ),
@@ -95,9 +110,9 @@ function Post({ post }: Props) {
           />
         </div>
       </article>
-      <hr className="max-w-lg my-5 mx-auto border-sky-500" />
+      <hr className="max-w-lg my-5 mx-auto border-cyan-500" />
       {submitted ? (
-        <div className="flex flex-col p-10 my-10 bg-sky-500 text-white max-w-2xl mx-auto">
+        <div className="flex flex-col p-10 my-10 bg-cyan-500 text-white max-w-2xl mx-auto">
           <h3 className="text-3xl font-bold">
             Thank you for sumitting your comment!
           </h3>
@@ -110,7 +125,9 @@ function Post({ post }: Props) {
           onSubmit={handleSubmit(onSubmit)}
           className="flex mx-auto flex-col p-5 max-w-2xl mb-10"
         >
-          <h3 className="text-sm text-sky-500">Enjoyed this article</h3>
+          <h3 className="font-titleFont text-[16px] text-cyan-500">
+            Enjoyed this article
+          </h3>
           <h4 className="text-3xl font-bold">Leave a comment below!</h4>
           <hr className="py-3 mt-2" />
 
@@ -122,28 +139,28 @@ function Post({ post }: Props) {
           />
 
           <label className="block mb-5">
-            <span className="text-gray-700">Name</span>
+            <span className="labelText">Name</span>
             <input
               {...register("name", { required: true })}
-              className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-sky-500 outline-none focus:ring"
+              className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-cyan-500 outline-none focus:ring labelTextInput"
               placeholder="Enter your name"
               type="text"
             />
           </label>
           <label className="block mb-5">
-            <span className="text-gray-700">Email</span>
+            <span className="labelText">Email</span>
             <input
               {...register("email", { required: true })}
-              className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-sky-500 outline-none focus:ring"
+              className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-cyan-500 outline-none focus:ring labelTextInput"
               placeholder="Place your Email"
               type="email"
             />
           </label>
           <label className="block mb-5">
-            <span className="text-gray-700">Comment</span>
+            <span className="labelText">Comment</span>
             <textarea
               {...register("comment", { required: true })}
-              className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-sky-500 outline-none focus:ring"
+              className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-cyan-500 outline-none focus:ring labelTextInput"
               placeholder="Comments will go here"
               rows={8}
             />
@@ -166,24 +183,25 @@ function Post({ post }: Props) {
           </div>
           <input
             type="submit"
-            className="shadow bg-sky-500 hover:bg-sky-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
+            className="shadow bg-cyan-600 hover:bg-sky-900 focus:shadow-outline focus:outline-none text-white font-titleFont font-bold duration-300 text-[18px] py-2 px-4 rounded cursor-pointer"
           />
         </form>
       )}
 
       {/* Comments will go here */}
-      <div className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-sky-500 shadow space-y-2">
+      <div className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-cyan-500 shadow space-y-2">
         <h3 className="text-4xl">Comments</h3>
         <hr className="pb-2" />
         {post.comments.map((comment) => (
           <div key={comment._id}>
             <p>
-              <span className="text-sky-500">{comment.name}:</span>{" "}
+              <span className="text-cyan-500">{comment.name}:</span>{" "}
               {comment.comment}
             </p>
           </div>
         ))}
       </div>
+      <FooterExtra />
     </main>
   );
 }
