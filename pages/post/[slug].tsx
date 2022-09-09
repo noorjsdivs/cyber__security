@@ -48,7 +48,7 @@ function Post({ post }: Props) {
       <img
         className="w-full h-80 object-cover"
         src={urlFor(post.mainImage).url()}
-        alt=""
+        alt="BannerImage"
       />
       <article className="max-w-3xl mx-auto p-5">
         <h1 className="font-titleFont text-[32px] text-primary mt-10 mb-3">
@@ -72,8 +72,8 @@ function Post({ post }: Props) {
         <div className="mt-10 font-bodyFont">
           <PortableText
             className=""
-            dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+            dataset={process.env.NEXT_PUBLIC_SANITY_DATASET || "production"}
+            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "8b5tp3lo"}
             content={post.body}
             serializers={{
               p: (props: any) => (
@@ -105,7 +105,7 @@ function Post({ post }: Props) {
                   {children}
                 </a>
               ),
-              image: (props: any) => <img src={props.image} alt="" />,
+              // image: (props: any) => <img src={props.image} alt="postImages" />,
             }}
           />
         </div>

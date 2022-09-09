@@ -23,7 +23,7 @@ function Header() {
         {navLinks.map((navLink, index) => (
           <li
             key={navLink.id}
-            className={`text-dimWhite font-bodyFont font-semibold cursor-pointer text-[16px] ${
+            className={`text-dimWhite uppercase font-bodyFont font-semibold cursor-pointer text-[16px] ${
               index === navLinks.length - 1 ? "mr-0" : "mr-10"
             } hover:text-cyan-400 duration-300`}
           >
@@ -49,7 +49,7 @@ function Header() {
             {navLinks.map((navLink) => (
               <li
                 key={navLink.id}
-                className={`font-poppins text-white font-normal cursor-pointer text-[16px] mb-4 hover:text-cyan-400 hover:border-b-[1px] border-cyan-400 duration-300 w-full text-center`}
+                className={`font-poppins uppercase text-white font-normal cursor-pointer text-[16px] mb-4 hover:text-cyan-400 hover:border-b-[1px] border-cyan-400 duration-300 w-full text-center`}
               >
                 <Link href={navLink.href} passHref>
                   {navLink.title}

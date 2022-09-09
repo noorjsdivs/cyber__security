@@ -18,8 +18,8 @@ export const navLinks = [
     href: "/post/article",
   },
   {
-    id: "follow",
-    title: "Follow",
+    id: "blog",
+    title: "Blog",
     href: "#",
   },
   {

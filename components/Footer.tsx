@@ -63,7 +63,7 @@ const Footer = () => {
                     alt="social Icon"
                     width={30}
                     src={social.icon}
-                    className={`brightness-75 hover:brightness-125 duration-300 cursor-pointer ${
+                    className={`brightness-75 hover:brightness-125 duration-300 text-primary  cursor-pointer ${
                       index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
                     }`}
                   />
