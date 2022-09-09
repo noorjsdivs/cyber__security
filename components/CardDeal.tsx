@@ -1,5 +1,4 @@
 import Image from "next/image";
-import YouTube, { YouTubeProps } from "react-youtube";
 import { card } from "../public/assets";
 import Button from "./Button";
 
