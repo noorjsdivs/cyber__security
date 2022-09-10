@@ -23,9 +23,10 @@ const Billing = () => (
       <p
         className={`font-bodyFont font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5 hover:text-white duration-300`}
       >
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, rem harum
-        aspernatur impedit expedita repellendus officia! Suscipit ducimus
-        debitis accusamus.
+        You must keep track of your online bills and invoices becuase it may
+        need in any moment at anytime. Be sure to save it properly and safely in
+        secure folder of your system. Our Apps can help you to track those in
+        professional way. find our apps on...
       </p>
       <div className="flex flex-row flex-wrap mt-10 sm:mt-10">
         <Image

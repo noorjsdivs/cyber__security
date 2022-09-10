@@ -10,9 +10,10 @@ const CardDeal = () => (
         Online transections.
       </h2>
       <p className="font-poppins font-normal text-dimWhite hover:text-white duration-300 text-[18px] leading-[30.8px] max-w-[470px] mt-5 mb-6">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
-        voluptate minus fugiat laboriosam perferendis eveniet neque esse. Soluta
-        saepe, recusandae architecto exercitationem labore earum non?
+        Your online payment Credential can be much more vulnerable if you have
+        no proper knowledge about how to use it safely. Our Cyber Security based
+        articles can help you to sharpen your skills and increase your overall
+        perticipation on it with full safety. Don't missed to read...
       </p>
       <Button />
     </div>
