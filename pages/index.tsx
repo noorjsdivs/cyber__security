@@ -32,45 +32,6 @@ export default function Home({ posts }: Props) {
             Popular Articles:
           </h1>
         </div>
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 py-6 border-b-[1px] border-b-cyan-900 px-4">
-          {posts.map((post) => (
-            <Link key={post._id} href={`/post/${post.slug.current}`} passHref>
-              <div className="group brightness-75 hover:brightness-100 duration-100 cursor-pointer overflow-hidden border rounded-lg">
-                <Image
-                  width={380}
-                  height={300}
-                  objectFit="cover"
-                  layout="responsive"
-                  className="group-hover:scale-105 transition-transform ease-in-out duration-300"
-                  src={urlFor(post.mainImage).url()}
-                  alt="images"
-                />
-                <div className="flex justify-between h-full p-5 bg-white">
-                  <div>
-                    <p className="font-titleFont font-bold text-[18px]">
-                      {post.title}
-                    </p>
-                    <p className="font-bodyFont text-[14px]">
-                      {post.description} <br />
-                      <span className="font-semibold">by_ </span>
-                      <span className="font-titleFont font-bold text-[18px] text-primary">
-                        {" "}
-                        {post.author.name}
-                      </span>
-                    </p>
-                  </div>
-                  <div className="w-1/2 flex justify-end">
-                    <img
-                      className="h-12 w-12 rounded-full"
-                      src={urlFor(post.author.image).url()}
-                      alt="articleImages"
-                    />
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div> */}
         <Pagination itemsPerPage={6} posts={posts} />
         <VideoContent />
         <Billing />

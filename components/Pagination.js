@@ -24,11 +24,21 @@ function Items({ currentItems }) {
                     src={urlFor(item.mainImage).url()}
                     alt="images"
                   />
-                  <div className="flex justify-between h-[250px] p-5 bg-white  text-primary">
+                  <div className="flex justify-between h-[280px] p-5 bg-white  text-primary">
                     <div>
-                      <p className="font-titleFont font-bold text-[18px]">
-                        {item.title}
-                      </p>
+                      <div className="flex items-center justify-between border-b-[1px] border-b-cyan-900 mb-2">
+                        <p className="font-titleFont font-bold text-[20px]">
+                          {item.title}
+                        </p>
+                        <Image
+                          width={50}
+                          height={50}
+                          objectFit="fill"
+                          className="rounded-full bg-red-400"
+                          src={urlFor(item.author.image).url()}
+                          alt="articleImages"
+                        />
+                      </div>
                       <p className="font-bodyFont text-[14px]">
                         {item.description} <br />
                         <span className="font-semibold">by_ </span>
@@ -37,13 +47,16 @@ function Items({ currentItems }) {
                         </span>
                       </p>
                     </div>
-                    <div className="w-1/2 flex justify-end">
-                      <img
-                        className="h-12 w-12 rounded-full"
+                    {/* <div className="w-72 flex items-center justify-end">
+                      <Image
+                        width={60}
+                        height={60}
+                        objectFit="contain"
+                        className="h-10 w-16 rounded-full"
                         src={urlFor(item.author.image).url()}
                         alt="articleImages"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Link>
