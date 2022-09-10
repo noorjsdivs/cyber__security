@@ -9,39 +9,51 @@ const VideoContent = () => {
           Our Video Articles:
         </h1>
       </div>
-      <div className="flex flex-wrap gap-6 justify-center px-4">
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=DNqJwvnneH8"
-          style={{
-            maxWidth: "550px",
-            border: "1px solid gray",
-            padding: "10px",
-          }}
-        />
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=-d5nh0mJ4Hs"
-          style={{
-            maxWidth: "550px",
-            border: "1px solid gray",
-            padding: "10px",
-          }}
-        />
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=og_6NM7Cm5M"
-          style={{
-            maxWidth: "550px",
-            border: "1px solid gray",
-            padding: "10px",
-          }}
-        />
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=smVGdFw8ta0"
-          style={{
-            maxWidth: "550px",
-            border: "1px solid gray",
-            padding: "10px",
-          }}
-        />
+      <div className="flex flex-wrap gap-6 justify-center px-4 ">
+        <div className="brightness-75 hover:brightness-105 duration-150 flex items-center justify-center flex-wrap max-w-[480px] md:max-w-[550px]">
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=DNqJwvnneH8"
+            style={{
+              maxWidth: "550px",
+              border: "1px solid gray",
+              padding: "10px",
+            }}
+            controls={true}
+          />
+        </div>
+        <div className="brightness-75 hover:brightness-105 duration-150 flex items-center justify-center flex-wrap max-w-[480px] md:max-w-[550px]">
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=-d5nh0mJ4Hs"
+            style={{
+              maxWidth: "550px",
+              border: "1px solid gray",
+              padding: "10px",
+            }}
+            controls={true}
+          />
+        </div>
+        <div className="brightness-75 hover:brightness-105 duration-150 flex items-center justify-center flex-wrap max-w-[480px] md:max-w-[550px]">
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=og_6NM7Cm5M"
+            style={{
+              maxWidth: "550px",
+              border: "1px solid gray",
+              padding: "10px",
+            }}
+            controls={true}
+          />
+        </div>
+        <div className="brightness-75 hover:brightness-105 duration-150 flex items-center justify-center flex-wrap max-w-[480px] md:max-w-[550px]">
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=smVGdFw8ta0"
+            style={{
+              maxWidth: "550px",
+              border: "1px solid gray",
+              padding: "10px",
+            }}
+            controls={true}
+          />
+        </div>
       </div>
     </div>
   );

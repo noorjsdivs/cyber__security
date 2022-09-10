@@ -51,7 +51,7 @@ function Post({ post }: Props) {
         alt="BannerImage"
       />
       <article className="max-w-3xl mx-auto p-5">
-        <h1 className="font-titleFont text-[32px] text-primary mt-10 mb-3">
+        <h1 className="font-titleFont text-[32px] text-primary border-b-[1px] border-b-cyan-800 mt-10 mb-3">
           {post.title}
         </h1>
         <h2 className="font-bodyFont text-[18px] text-gray-500 mb-2">
