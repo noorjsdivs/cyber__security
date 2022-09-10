@@ -40,7 +40,7 @@ const FooterExtra = () => {
                     }`}
                   >
                     <Link href={link.link} passHref>
-                      {link.name}
+                      <a target="_blank">{link.name}</a>
                     </Link>
                   </li>
                 ))}

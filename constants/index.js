@@ -20,7 +20,7 @@ export const navLinks = [
   {
     id: "blog",
     title: "Blog",
-    href: "#",
+    href: "https://www.noormohammad.live/",
   },
   {
     id: "contact",
@@ -72,7 +72,7 @@ export const footerLinks = [
       },
       {
         name: "Blog",
-        link: "#",
+        link: "https://www.noormohammad.live/",
       },
       {
         name: "Newsletters",

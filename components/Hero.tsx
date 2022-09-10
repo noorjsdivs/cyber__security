@@ -34,8 +34,7 @@ const Hero = () => (
     </div>
     <div className="flex-1 flex justify-center items-center md:my-0 my-10 relative">
       <div className="w-[100%] h-[100%] z-[5] brightness-90 hover:brightness-110 duration-200">
-        <Image src={RobotImg} alt="robotImage" />
-
+        <Image src={RobotImg} alt="robotImage" priority loading="eager" />
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient"></div>
         <div className="absolute z-[1] w-[80%] h-[40%] rounded-full bottom-20 white__gradient"></div>
         <div className="absolute z-[0] w-[50%] h-[80%] right-20 bottom-20 blue__gradient"></div>
