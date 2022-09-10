@@ -12,8 +12,8 @@ function Items({ currentItems }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 py-6 px-4">
         {currentItems &&
           currentItems.map((item) => (
-            <div className="w-full h-auto">
-              <Link key={item._id} href={`/post/${item.slug.current}`} passHref>
+            <div className="w-full h-auto key={item._id}">
+              <Link href={`/post/${item.slug.current}`} passHref>
                 <div className="group brightness-75 hover:brightness-100 duration-100 cursor-pointer overflow-hidden border rounded-lg">
                   <Image
                     width={380}

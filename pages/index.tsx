@@ -1,13 +1,11 @@
-import Link from "next/link";
 import Head from "next/head";
 import Header from "../components/Header";
-import { sanityClient, urlFor } from "../sanity";
+import { sanityClient } from "../sanity";
 import { Post } from "../typings";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import CardDeal from "../components/CardDeal";
 import Billing from "../components/Billing";
-import Image from "next/image";
 import VideoContent from "../components/VideoContent";
 import Pagination from "../components/Pagination";
 
