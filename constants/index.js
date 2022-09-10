@@ -20,12 +20,12 @@ export const navLinks = [
   {
     id: "blog",
     title: "Blog",
-    href: "https://www.noormohammad.live/",
+    href: "https://my-blog-delta-eight.vercel.app/",
   },
   {
     id: "contact",
     title: "Contact",
-    href: "#",
+    href: "https://noormohmmad.com/",
   },
 ];
 
@@ -72,7 +72,7 @@ export const footerLinks = [
       },
       {
         name: "Blog",
-        link: "https://www.noormohammad.live/",
+        link: "https://my-blog-delta-eight.vercel.app/",
       },
       {
         name: "Newsletters",
