@@ -66,11 +66,15 @@ function Post({ post }: Props) {
           {post.description}
         </h2>
         <div className="flex items-center space-x-2">
-          <img
-            className="h-10 w-10 rounded-full"
+          <Image
+            width={60}
+            height={60}
+            objectFit="fill"
+            className="rounded-full bg-red-400"
             src={urlFor(post.author.image).url()}
-            alt=""
+            alt="authorImage"
           />
+
           <p className="font-bodyFont text-[16px]">
             Blog post by{" "}
             <span className="text-cyan-600 font-bold">{post.author.name}</span>{" "}

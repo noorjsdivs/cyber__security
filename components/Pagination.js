@@ -36,7 +36,7 @@ function Items({ currentItems }) {
                           objectFit="fill"
                           className="rounded-full bg-red-400"
                           src={urlFor(item.author.image).url()}
-                          alt="articleImages"
+                          alt="authorImage"
                         />
                       </div>
                       <p className="font-bodyFont text-[14px]">
