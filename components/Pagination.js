@@ -47,16 +47,6 @@ function Items({ currentItems }) {
                         </span>
                       </p>
                     </div>
-                    {/* <div className="w-72 flex items-center justify-end">
-                      <Image
-                        width={60}
-                        height={60}
-                        objectFit="contain"
-                        className="h-10 w-16 rounded-full"
-                        src={urlFor(item.author.image).url()}
-                        alt="articleImages"
-                      />
-                    </div> */}
                   </div>
                 </div>
               </Link>
@@ -76,7 +66,7 @@ const Pagination = ({ itemsPerPage, posts }) => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(posts.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(posts.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
+  }, [itemOffset, itemsPerPage, posts]);
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
 

@@ -6,6 +6,7 @@ import { Post } from "../../typings";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import FooterExtra from "../../components/FooterExtra";
+import Image from "next/image";
 
 interface IFormInput {
   _id: string;
@@ -45,11 +46,18 @@ function Post({ post }: Props) {
     <main>
       <Header />
 
-      <img
+      <Image
+        width={500}
+        height={130}
+        layout="responsive"
+        objectFit="cover"
         className="w-full h-80 object-cover"
         src={urlFor(post.mainImage).url()}
         alt="BannerImage"
+        priority
+        loading="eager"
       />
+
       <article className="max-w-3xl mx-auto p-5">
         <h1 className="font-titleFont text-[32px] text-primary border-b-[1px] border-b-cyan-800 mt-10 mb-3">
           {post.title}
@@ -105,7 +113,6 @@ function Post({ post }: Props) {
                   {children}
                 </a>
               ),
-              // image: (props: any) => <img src={props.image} alt="postImages" />,
             }}
           />
         </div>
