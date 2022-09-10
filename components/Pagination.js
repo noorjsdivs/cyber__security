@@ -24,7 +24,7 @@ function Items({ currentItems }) {
                     src={urlFor(item.mainImage).url()}
                     alt="images"
                   />
-                  <div className="flex justify-between h-[280px] p-5 bg-white  text-primary">
+                  <div className="flex justify-between h-[280px] relative p-5 bg-white  text-primary">
                     <div>
                       <div className="flex items-center justify-between border-b-[1px] border-b-cyan-900 mb-2">
                         <p className="font-titleFont font-bold text-[20px]">
@@ -45,6 +45,9 @@ function Items({ currentItems }) {
                         <span className="font-titleFont font-bold text-[18px] text-primary">
                           {item.author.name}
                         </span>
+                        <p className="font-bodyFont absolute bottom-2 hidden group-hover:inline-block duration-150 animate-bounce right-5 text-primary font-bold text-center mt-2 text-[16px] uppercase border-b-[1px] border-b-primary">
+                          Click to read
+                        </p>
                       </p>
                     </div>
                   </div>
