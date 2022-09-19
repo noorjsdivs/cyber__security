@@ -6,9 +6,6 @@ import GetStarted from "./GetStarted";
 import Link from "next/link";
 
 const Hero = () => {
-  // const handleLogin = () => {
-  //   console.log("done");
-  // };
   return (
     <div className="max-w-screen-xl md:flex items-center justify-between xl:px-0 sm:px-16 px-6 mt-[60px] mb-[10px]">
       <div className="flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6">
@@ -38,6 +35,20 @@ const Hero = () => {
           understand the new era of technology in much better way. We are trying
           to make an awareness regarding the Online safety in a bigger view.
         </p>
+
+        <div className="pt-5 flex flex-row gap-2">
+          <Link href="https://my-blog-delta-eight.vercel.app/">
+            <a target="_blank">
+              <button className="heroButton">Reactjs</button>
+            </a>
+          </Link>
+
+          <Link href="https://noormohmmad.com/">
+            <a target="_blank">
+              <button className="heroButton">Portfolio</button>
+            </a>
+          </Link>
+        </div>
       </div>
       <div className="flex-1 flex justify-center items-center md:my-0 my-10 relative">
         <div className="w-[100%] h-[100%] z-[5] brightness-90 hover:brightness-110 duration-200">

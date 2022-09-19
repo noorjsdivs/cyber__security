@@ -11,6 +11,9 @@
   .labelTextInput {
     @apply font-bodyFont text-[15px] font-normal text-gray-500;
   }
+  .heroButton {
+    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+  }
 }
 
 :root {

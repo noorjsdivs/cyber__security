@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import LogoImage from "../public/assets/newLogo.png";
@@ -9,31 +10,54 @@ function Header() {
   const [toggle, setToggle] = useState(false);
   return (
     <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 sticky top-0 z-10 border-b-[1px] border-b-cyan-900">
-      <Link href="/" passHref>
-        <Image
-          alt="LogoImage"
-          width={300}
-          height={62}
-          src={LogoImage}
-          className="cursor-pointer hover:brightness-125 duration-1000"
-        />
-      </Link>
+      <motion.div
+        initial={{ x: -500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+        }}
+      >
+        <Link href="/" passHref>
+          <Image
+            alt="LogoImage"
+            width={300}
+            height={62}
+            src={LogoImage}
+            className="cursor-pointer hover:brightness-125 duration-1000"
+          />
+        </Link>
+      </motion.div>
 
-      <ul className="list-none hidden sm:flex">
-        {navLinks.map((navLink, index) => (
-          <li
-            key={navLink.id}
-            className={`text-dimWhite uppercase font-bodyFont font-semibold cursor-pointer text-[16px] ${
-              index === navLinks.length - 1 ? "mr-0" : "mr-10"
-            } hover:text-cyan-400 duration-300`}
-          >
-            <Link href={navLink.href} passHref>
-              {navLink.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <motion.div
+        initial={{ x: 500, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 1.5,
+        }}
+      >
+        <ul className="list-none hidden sm:flex">
+          {navLinks.map((navLink, index) => (
+            <li
+              key={navLink.id}
+              className={`text-dimWhite uppercase font-bodyFont font-semibold cursor-pointer text-[16px] ${
+                index === navLinks.length - 1 ? "mr-0" : "mr-10"
+              } hover:text-cyan-400 duration-300`}
+            >
+              <Link href={navLink.href} passHref>
+                {navLink.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
+      <motion.div
+        initial={{ x: 500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="sm:hidden flex flex-1 justify-end items-center"
+      >
         <Image
           alt="toggle Icons"
           src={toggle ? close : menu}
@@ -58,7 +82,7 @@ function Header() {
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 }

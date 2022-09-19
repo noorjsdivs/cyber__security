@@ -3,7 +3,7 @@ import { card } from "../public/assets";
 import Button from "./Button";
 
 const CardDeal = () => (
-  <div className={`flex md:flex-row flex-col sm:py-16 py-6 px-4 md:px-0`}>
+  <div className="flex h-screen md:flex-row flex-col sm:py-16 py-6 px-4 md:px-0">
     <div className="flex-1 flex justify-center items-start flex-col">
       <h2 className="font-bodyFont font-semibold xs:text-[48px] text-[44px] text-white xs:leading-[76.8px] leading-[66.8px] w-full">
         Find the best topic related <br className="sm:block hidden" /> your

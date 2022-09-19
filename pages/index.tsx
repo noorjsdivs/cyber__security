@@ -15,7 +15,7 @@ interface Props {
 
 export default function Home({ posts }: Props) {
   return (
-    <div className="w-full bg-primary ">
+    <div className="xs:max-w-[500px] sm:max-w-full bg-primary">
       <div className="max-w-screen-xl mx-auto">
         <Head>
           <title>Noor--Cyber Security Bolg</title>
