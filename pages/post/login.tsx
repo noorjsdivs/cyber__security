@@ -23,14 +23,11 @@ function login() {
             <h2 className="mt-6 text-center font-titleFont font-bold text-[32px] text-gray-900">
               Sign in to your account
             </h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
-              <a
-                href="/"
-                className="font-medium text-cyan-600 hover:text-cyan-500"
-              >
+            <Link href="/" passHref>
+              <p className="mt-2 text-center text-sm font-medium text-cyan-600 hover:text-cyan-500">
                 Don't have an Account Contact to Admin
-              </a>
-            </p>
+              </p>
+            </Link>
           </div>
           <form className="mt-8 space-y-6">
             <input type="hidden" name="remember" defaultValue="true" />
