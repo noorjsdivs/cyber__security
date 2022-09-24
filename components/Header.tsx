@@ -10,14 +10,14 @@ function Header() {
   const [toggle, setToggle] = useState(false);
   return (
     <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 sticky top-0 z-10 border-b-[1px] border-b-cyan-900">
-      <motion.div
-        initial={{ x: -500, opacity: 0, scale: 0.5 }}
-        animate={{ x: 0, opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1.5,
-        }}
-      >
-        <Link href="/" passHref>
+      <Link href="/" passHref>
+        <motion.div
+          initial={{ x: -500, opacity: 0, scale: 0.5 }}
+          animate={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.5,
+          }}
+        >
           <Image
             alt="LogoImage"
             width={300}
@@ -25,8 +25,8 @@ function Header() {
             src={LogoImage}
             className="cursor-pointer hover:brightness-125 duration-1000"
           />
-        </Link>
-      </motion.div>
+        </motion.div>
+      </Link>
 
       <motion.div
         initial={{ x: 500, opacity: 0 }}

@@ -11,19 +11,21 @@ function login() {
         <div className="max-w-md w-full space-y-8">
           <div>
             <Link href="/" passHref>
-              <Image
-                height={100}
-                className="cursor-pointer shadow-cyan-600 shadow space-y-2"
-                src={LogoImage}
-                alt="LogoImage"
-              />
+              <div>
+                <Image
+                  height={100}
+                  className="cursor-pointer shadow-cyan-600 shadow space-y-2"
+                  src={LogoImage}
+                  alt="LogoImage"
+                />
+              </div>
             </Link>
             <h2 className="mt-6 text-center font-titleFont font-bold text-[32px] text-gray-900">
               Sign in to your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               <a
-                href="#"
+                href="/"
                 className="font-medium text-cyan-600 hover:text-cyan-500"
               >
                 Don't have an Account Contact to Admin
