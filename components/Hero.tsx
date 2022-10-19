@@ -34,9 +34,9 @@ const Hero = () => {
             </div>
           </Link>
         </div>
-        <h1 className="font-bodyFont font-semibold text-2xl underline underline-offset-4 md:no-underline leading-[40px] md:leading-[75px] lg:leading-[50px] xl:leading-[75px] md:text-[40px] mdl:text-[55px] lgl:text-[35px] xl:text-[55px] text-white w-full">
+        <h2 className="font-bodyFont font-semibold text-2xl underline underline-offset-4 md:no-underline leading-[40px] md:leading-[75px] lg:leading-[50px] xl:leading-[75px] md:text-[40px] mdl:text-[55px] lgl:text-[35px] xl:text-[55px] text-white w-full">
           Through our contents.
-        </h1>
+        </h2>
         <p className="max-w-[470px] mt-5 text-dimWhite text-[16px] text-justify hover:text-white duration-300">
           Our team of writers uses a methodology to identify the current major
           threat on Cyber Safety and writing contents which can help you to

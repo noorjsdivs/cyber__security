@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
 const VideoContent = () => {
+  const [videoMaterials, setVideoMaterials] = useState<any[]>([]);
+  useEffect(() => {
+    const video = [
+      {
+        id: 1001,
+        videoLink: "https://www.youtube.com/watch?v=DNqJwvnneH8",
+      },
+      {
+        id: 1002,
+        videoLink: "https://www.youtube.com/watch?v=DNqJwvnneH8",
+      },
+      {
+        id: 1003,
+        videoLink: "https://www.youtube.com/watch?v=DNqJwvnneH8",
+      },
+      {
+        id: 1004,
+        videoLink: "https://www.youtube.com/watch?v=DNqJwvnneH8",
+      },
+    ];
+    setVideoMaterials(video);
+  }, []);
+
   return (
     <div className="text-dimWhite mt-8 flex-col items-center max-w-screen-xl mx-auto border-b-[1px] border-b-cyan-900 pb-6">
       <div>
@@ -10,7 +33,22 @@ const VideoContent = () => {
         </h1>
       </div>
       <div className="px-6 grid grid-cols-1 lg:grid-cols-2 place-items-center gap-6">
-        <div className="brightness-75 hover:brightness-105 duration-150 flex items-center justify-center flex-wrap w-full h-auto">
+        {videoMaterials.map((videos) => (
+          <div
+            key={videos.id}
+            className="brightness-75 hover:brightness-105 duration-150 flex items-center justify-center flex-wrap w-full h-auto"
+          >
+            <ReactPlayer
+              url={videos.videoLink}
+              style={{
+                border: "1px solid gray",
+                padding: "10px",
+              }}
+              controls={true}
+            />
+          </div>
+        ))}
+        {/* <div className="brightness-75 hover:brightness-105 duration-150 flex items-center justify-center flex-wrap w-full h-auto">
           <ReactPlayer
             url="https://www.youtube.com/watch?v=DNqJwvnneH8"
             style={{
@@ -49,7 +87,7 @@ const VideoContent = () => {
             }}
             controls={true}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
