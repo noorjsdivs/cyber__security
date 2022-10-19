@@ -9,7 +9,7 @@ import { menu, close } from "../public/assets";
 function Header() {
   const [toggle, setToggle] = useState(false);
   return (
-    <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 sticky top-0 z-10 border-b-[1px] border-b-cyan-900">
+    <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 px-4 xl:px-0 sticky top-0 z-10 border-b-[1px] border-b-cyan-900">
       <Link href="/" passHref>
         <motion.div
           initial={{ x: -500, opacity: 0, scale: 0.5 }}
@@ -35,7 +35,7 @@ function Header() {
           duration: 1.5,
         }}
       >
-        <ul className="list-none hidden sm:flex">
+        <ul className="list-none hidden mdl:flex">
           {navLinks.map((navLink, index) => (
             <li
               key={navLink.id}
@@ -56,13 +56,15 @@ function Header() {
         transition={{
           duration: 1.5,
         }}
-        className="sm:hidden flex flex-1 justify-end items-center"
+        className="mdl:hidden flex flex-1 justify-end items-center"
       >
         <Image
           alt="toggle Icons"
+          width={30}
+          height={30}
           src={toggle ? close : menu}
           onClick={() => setToggle((prev) => !prev)}
-          className="cursor-pointer"
+          className="cursor-pointer "
         />
         <div
           className={`${

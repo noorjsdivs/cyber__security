@@ -6,9 +6,9 @@ import { footerLinks, socialMedia } from "../constants";
 
 const FooterExtra = () => {
   return (
-    <div className=" max-w-screen-xl mx-auto flex justify-center items-center flex-col px-4 md:px-0 pb-6 border-t-[1px] border-t-cyan-900 py-4">
+    <div className=" flex justify-center items-center flex-col px-6 xl:px-0 pb-6 border-t-[1px] border-t-cyan-900 py-4">
       <div className={`flex justify-start md:flex-row flex-col mb-8 w-full`}>
-        <div className="mr-20 flex-col justify-start items-center text-left">
+        <div className="lg:mr-20 flex-col justify-start items-center text-left">
           <Link href="/" passHref>
             <Image
               alt="LogoImage"
@@ -19,7 +19,7 @@ const FooterExtra = () => {
               className="cursor-pointer hover:brightness-125 duration-1000"
             />
           </Link>
-          <p className="text-primary duration-300 w-96">
+          <p className="text-primary hover:text-white duration-300 w-full md:max-w-[500px] lg:w-96">
             Cyber awareness refers to the level of awareness and understanding
             end users have about cybersecurity best practices and the cyber
             threats that their networks or organizations face everyday.

@@ -133,12 +133,9 @@ function Post({ post }: Props) {
           </p>
         </div>
       ) : (
-        <motion.form
-          initial={{ x: 500, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.5 }}
+        <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex mx-auto flex-col p-5 max-w-2xl mb-10"
+          className="flex mx-auto flex-col p-5 max-w-2xl mb-10 w-full"
         >
           <h3 className="font-titleFont text-[16px] text-cyan-500">
             Enjoyed this article
@@ -200,7 +197,7 @@ function Post({ post }: Props) {
             type="submit"
             className="shadow bg-cyan-600 hover:bg-sky-900 focus:shadow-outline focus:outline-none text-white font-titleFont font-bold duration-300 text-[18px] py-2 px-4 rounded cursor-pointer"
           />
-        </motion.form>
+        </form>
       )}
 
       {/* Comments will go here */}

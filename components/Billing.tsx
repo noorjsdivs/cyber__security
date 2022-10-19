@@ -2,10 +2,7 @@ import Image from "next/image";
 import { apple, bill, google } from "../public/assets";
 
 const Billing = () => (
-  <div
-    id="product"
-    className={`flex md:flex-row flex-col-reverse sm:py-16 py-6 px-4 md:px-0`}
-  >
+  <div id="product" className={`flex flex-col-reverse lg:flex-row py-20 px-6`}>
     <div className="flex-1 flex justify-center items-center md:mr-10 mr-0 md:mt-0 mt-10 relative brightness-75 hover:brightness-100 duration-150">
       <Image
         src={bill}
@@ -16,19 +13,18 @@ const Billing = () => (
       <div className="absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full pink__gradient"></div>
     </div>
     <div className="flex-1 flex justify-center items-start flex-col">
-      <h2 className="font-bodyFont font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full">
-        Easily control your <br className="sm:block hidden" /> billing &
-        invoicing.
+      <h2 className="font-bodyFont font-semibold w-full text-center lg:text-left text-white text-3xl md:text-4xl leading-[40px] md:leading-[50px]">
+        Easily control your <br /> billing & invoicing.
       </h2>
       <p
-        className={`font-bodyFont font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5 hover:text-white duration-300`}
+        className={`font-bodyFont font-normal text-dimWhite text-[16px] md:text-[18px] mt-4 hover:text-white text-center lg:text-left duration-300 md:max-w-[470px] mx-auto lg:mx-0`}
       >
         You must keep track of your online bills and invoices becuase it may
         need in any moment at anytime. Be sure to save it properly and safely in
         secure folder of your system. Our Apps can help you to track those in
         professional way. find our apps on...
       </p>
-      <div className="flex flex-row flex-wrap mt-10 sm:mt-10">
+      <div className="mt-10 w-full flex flex-row justify-center lg:justify-start items-center gap-4">
         <Image
           alt="appleStore"
           src={apple}
