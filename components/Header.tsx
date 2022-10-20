@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import LogoImage from "../public/assets/newLogo.png";
@@ -11,13 +10,7 @@ function Header() {
   return (
     <header className="max-w-screen-xl mx-auto bg-primary text-dimWhite flex items-center justify-between p-3 px-4 xl:px-0 sticky top-0 z-10 border-b-[1px] border-b-cyan-900">
       <Link href="/" passHref>
-        <motion.div
-          initial={{ x: -500, opacity: 0, scale: 0.5 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
-          transition={{
-            duration: 1.5,
-          }}
-        >
+        <div>
           <Image
             alt="LogoImage"
             width={300}
@@ -25,16 +18,10 @@ function Header() {
             src={LogoImage}
             className="cursor-pointer hover:brightness-125 duration-1000"
           />
-        </motion.div>
+        </div>
       </Link>
 
-      <motion.div
-        initial={{ x: 500, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{
-          duration: 1.5,
-        }}
-      >
+      <div>
         <ul className="list-none hidden mdl:flex pr-6">
           {navLinks.map((navLink, index) => (
             <li
@@ -49,15 +36,8 @@ function Header() {
             </li>
           ))}
         </ul>
-      </motion.div>
-      <motion.div
-        initial={{ x: 500, opacity: 0, scale: 0.5 }}
-        animate={{ x: 0, opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1.5,
-        }}
-        className="mdl:hidden flex flex-1 justify-end items-center"
-      >
+      </div>
+      <div className="mdl:hidden flex flex-1 justify-end items-center">
         <Image
           alt="toggle Icons"
           width={30}
@@ -84,7 +64,7 @@ function Header() {
             ))}
           </ul>
         </div>
-      </motion.div>
+      </div>
     </header>
   );
 }

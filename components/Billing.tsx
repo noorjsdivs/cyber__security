@@ -28,12 +28,12 @@ const Billing = () => (
         <Image
           alt="appleStore"
           src={apple}
-          className="w-[128px] h-[42px] object-contain cursor-pointer mr-5 brightness-75 hover:brightness-105 duration-300"
+          className="w-[128px] h-[42px] object-contain cursor-pointer mr-5"
         />
         <Image
           alt="googlePlaystore"
           src={google}
-          className="w-[128px] h-[42px] object-contain cursor-pointer brightness-75 hover:brightness-105 duration-300"
+          className="w-[128px] h-[42px] object-contain cursor-pointer"
         />
       </div>
     </div>

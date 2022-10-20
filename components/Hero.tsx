@@ -60,7 +60,7 @@ const Hero = () => {
       </div>
       {/*======================= Hero Image start here ======================*/}
       <div className="flex-1 flex justify-center items-center md:my-0 my-10 relative">
-        <div className="w-[80%] lgl:w-[100%] h-[100%] z-[5] brightness-90 hover:brightness-110 duration-200">
+        <div className="w-[80%] lgl:w-[100%] h-[100%] z-[5]">
           <Image src={RobotImg} alt="robotImage" priority loading="eager" />
 
           <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient"></div>
