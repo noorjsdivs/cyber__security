@@ -6,7 +6,7 @@ import { footerLinks, socialMedia } from "../constants";
 
 const FooterExtra = () => {
   return (
-    <div className=" flex justify-center items-center flex-col px-6 xl:px-0 pb-6 border-t-[1px] border-t-cyan-900 py-4">
+    <div className="max-w-7xl mx-auto flex justify-center items-center flex-col px-6 xl:px-0 pb-6 border-t-[1px] border-t-cyan-900 py-4">
       <div className={`flex justify-start md:flex-row flex-col mb-8 w-full`}>
         <div className="lg:mr-20 flex-col justify-start items-center text-left">
           <Link href="/" passHref>

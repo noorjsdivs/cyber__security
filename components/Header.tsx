@@ -35,7 +35,7 @@ function Header() {
           duration: 1.5,
         }}
       >
-        <ul className="list-none hidden mdl:flex">
+        <ul className="list-none hidden mdl:flex pr-6">
           {navLinks.map((navLink, index) => (
             <li
               key={navLink.id}
